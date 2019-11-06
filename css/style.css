@@ -53,6 +53,28 @@ a:hover { color: black; }
 	background-color: #ccc;
 	padding: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-color:skyblue;
+	}
+	.grid {
+		grid-template-columns: 1fr 1fr;
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		background-color:skyblue;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	body {
+		background-color:skyblue;
+	}
+}
 /*
 font-family: 'Mansalva', cursive;
 font-family: 'Dosis', sans-serif;
