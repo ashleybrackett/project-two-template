@@ -4,7 +4,7 @@
 body { 
 	font-family: rigid-square, sans-serif;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	font-style; normal;
 	margin: 10px;
 	padding: 15px;
@@ -12,6 +12,7 @@ body {
 
 h1, h2, h3, h4 {
 	font-family: rigid-square, sans-serif;
+	font-weight: 600;
 	color: red;
 	padding: 5px;
 }
@@ -98,6 +99,51 @@ button {
 .grid div {
 	background-color: #ccc;
 	padding: 20px;
+}
+
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red }
+}
+
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red }
+}
+
+body { font-family: rigid-square, sans-serif; }
+
+h2 { 
+    position: relative; 
+    float: left;
+    font-size:150%;
+}
+
+h2 span {
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    background: rgba(255, 215, 0, .5); /* same as background */
+    border-left: .1em solid black;
+    
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    -webkit-animation: typing 6.5s steps(13, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation: typing 6.5s steps(13, end), /* # of steps = # of characters */
+                        blink-caret .5s step-end infinite;
 }
 
 @media only screen and (min-width: 768px) {
