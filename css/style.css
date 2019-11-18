@@ -2,12 +2,18 @@
 
 
 body { 
-	font-family: Helvetica, sans-serif;
+	font-family: rigid-square, sans-serif;
 	font-size: 16px;
+	font-weight: 600;
+	font-style; normal;
+	margin: 10px;
+	padding: 15px;
 	 }
 
 h1, h2, h3, h4 {
-	font-family: Helvetica, sans-serif;
+	font-family: rigid-square, sans-serif;
+	color: red;
+	padding: 5px;
 }
 
 h1 {
@@ -27,10 +33,31 @@ h4 {
 
 blockquote {
 	margin: 20px 60px;
-	font-family: Helvetica, sans-serif;
+	font-family: rigid-square, sans-serif;
 }
 
 header {margin-bottom: 20px;}
+
+footer {font-weight: 100;
+		text-align: center;}
+
+nav {
+	font-family: rigid-square, sans-serif; 
+	font-weight: 600; 
+	font-style: normal;
+	font-color:red;
+	text-align: center;
+	background: skyblue;
+		margin: 20px;
+		padding: 40px;
+}
+nav ul {
+	list-style-type: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 60px;
+}
 
 /* ensures that your images stretch the width of their containers */
 img { width: 100%; }
@@ -40,6 +67,25 @@ a {
 	text-decoration: none;
 	 }
 a:hover { color: black; }
+
+button {
+	background-color: gold;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+	margin: 10px;
+	text-align: center;
+	text-decoration: underline;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.slideshow {
+	width: 100%;
+	height: 400px;
+	margin: 10px auto;
+	outline: none;
+}
 
 .grid {
 	display: grid;
@@ -56,7 +102,7 @@ a:hover { color: black; }
 
 @media only screen and (min-width: 768px) {
 	body {
-		background-color:skyblue;
+		background-color: rgba(255, 215, 0, .5);
 	}
 	.grid {
 		grid-template-columns: 1fr 1fr;
@@ -66,13 +112,13 @@ a:hover { color: black; }
 
 @media only screen and (min-width: 1024px) {
 	body {
-		background-color:skyblue;
+		background-color: rgba(255, 215, 0, .5);
 	}
 }
 
 @media only screen and (min-width: 1200px) {
 	body {
-		background-color:skyblue;
+		background-color: rgba(255, 215, 0, .5);
 	}
 }
 /*
