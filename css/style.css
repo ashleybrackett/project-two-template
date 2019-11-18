@@ -101,6 +101,7 @@ button {
 	padding: 20px;
 }
 
+/*TYPEWRITER animation */
 @-webkit-keyframes typing {
     from { width: 100% }
     to { width:0 }
@@ -146,6 +147,7 @@ h2 span {
                         blink-caret .5s step-end infinite;
 }
 
+/*media queries SCREEN WIDTH SCALE*/
 @media only screen and (min-width: 768px) {
 	body {
 		background-color: rgba(255, 215, 0, .5);
