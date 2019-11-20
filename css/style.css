@@ -40,7 +40,9 @@ blockquote {
 header {margin-bottom: 20px;}
 
 footer {font-weight: 100;
-		text-align: center;}
+		text-align: center;
+		float: bottom;
+	}
 
 nav {
 	font-family: rigid-square, sans-serif; 
@@ -57,7 +59,7 @@ nav ul {
 }
 nav li {
 	display: inline-block;
-	margin-left: 60px;
+	margin-right:10px;
 }
 
 /* ensures that your images stretch the width of their containers */
@@ -101,6 +103,15 @@ button {
 	padding: 20px;
 }
 
+img.right {
+	float: right;
+	max-width: 60%;
+	height: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
 /*TYPEWRITER animation */
 @-webkit-keyframes typing {
     from { width: 100% }
@@ -129,13 +140,17 @@ h2 {
     float: left;
     font-size:150%;
 }
+.typewriter-block {
+	width: 100%;
+	height: 50px;
+}
 
 h2 span {
     position:absolute;
-    top:0;
+    top:6px;
     right:0;
     width:0;
-    background: rgba(255, 215, 0, .5); /* same as background */
+    background: white; /* same as background */
     border-left: .1em solid black;
     
     -moz-box-sizing: border-box;
