@@ -9,6 +9,7 @@
 	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="Stylesheet" href="https://gitcdn.xyz/repo/thomhines/square1/master/square1.min.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://use.typekit.net/jzt1tbh.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +25,7 @@
 		</ul>
 	</nav>
 	<main>
-		<div class="slideshow">
+		<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
 			<img src="images/locations-gallery-1.jpeg">
 			<img src="images/locations-gallery-2.jpg">
 			<img src="images/locations-gallery-3.jpeg">
@@ -56,6 +57,7 @@
   	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   	crossorigin="anonymous"></script>
   	<!-- link for your script file -->
+  	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
   	<script src="scripts/script.js"></script>
 </body>
 </html>
