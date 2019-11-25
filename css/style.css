@@ -6,9 +6,14 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	font-style; normal;
-	margin: 10px;
-	padding: 15px;
+	margin: 25px;
+	padding: 20px;
+	background-color: rgba(252, 230, 160, 1)
 	 }
+
+main {
+	margin-top: 100px;
+}
 
 h1, h2, h3, h4 {
 	font-family: rigid-square, sans-serif;
@@ -32,6 +37,17 @@ h4 {
 	font-size: 24px;
 }
 
+p{
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 40px;
+	color: white;
+}
+strong {
+	font-weight: 800;
+	color: red;
+}
+
 blockquote {
 	margin: 20px 60px;
 	font-family: rigid-square, sans-serif;
@@ -42,6 +58,7 @@ header {margin-bottom: 20px;}
 footer {font-weight: 100;
 		text-align: center;
 		float: bottom;
+		color: white;
 	}
 
 nav {
@@ -50,16 +67,67 @@ nav {
 	font-style: normal;
 	font-color:red;
 	text-align: center;
-	background: skyblue;
-		margin: 20px;
-		padding: 40px;
+	background: rgba(255, 255, 255, 0.6);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 10px;
+	margin: 0px;
+	width: 100%;
 }
+
 nav ul {
 	list-style-type: none;
 }
 nav li {
 	display: inline-block;
 	margin-right:10px;
+}
+
+.logo {
+	float: left;
+	width: 35%;
+	height: 35%;
+}
+
+
+/* failed hamburger icon */
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 /* ensures that your images stretch the width of their containers */
@@ -69,19 +137,22 @@ a {
 	color: red;
 	text-decoration: none;
 	 }
-a:hover { color: black; }
+a:hover { color: red; 
+	text-decoration: underline;
+	}
 
 button {
-	background-color: gold;
+	background-color: white;
 	border: none;
-	color: white;
+	color: red;
 	padding: 10px 30px;
 	margin: 10px;
 	text-align: center;
-	text-decoration: underline;
+	text-decoration: none;
 	display: inline-block;
 	font-size: 12px;
 }
+
 
 .slideshow {
 	width: 100%;
@@ -137,7 +208,7 @@ body { font-family: rigid-square, sans-serif; }
 
 h2 { 
     position: relative; 
-    float: left;
+    float: center;
     font-size:150%;
 }
 .typewriter-block {
@@ -150,22 +221,23 @@ h2 span {
     top:6px;
     right:0;
     width:0;
-    background: white; /* same as background */
+    background: rgba(252, 230, 160, 1); /* same as background */
     border-left: .1em solid black;
     
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     
     -webkit-animation: typing 6.5s steps(13, end), /* # of steps = # of characters */
-                        blink-caret 1s step-end infinite;
+                        blink-caret .5s step-end infinite;
     -moz-animation: typing 6.5s steps(13, end), /* # of steps = # of characters */
                         blink-caret .5s step-end infinite;
 }
 
+
 /*media queries SCREEN WIDTH SCALE*/
 @media only screen and (min-width: 768px) {
 	body {
-		background-color: rgba(255, 215, 0, .5);
+		background-color: rgba(252, 230, 160, 1);
 	}
 	.grid {
 		grid-template-columns: 1fr 1fr;
@@ -175,13 +247,13 @@ h2 span {
 
 @media only screen and (min-width: 1024px) {
 	body {
-		background-color: rgba(255, 215, 0, .5);
+		background-color: rgba(252, 230, 160, 1);
 	}
 }
 
 @media only screen and (min-width: 1200px) {
 	body {
-		background-color: rgba(255, 215, 0, .5);
+		background-color: rgba(252, 230, 160, 1);
 	}
 }
 /*
