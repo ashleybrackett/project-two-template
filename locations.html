@@ -9,6 +9,7 @@
 	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="Stylesheet" href="https://gitcdn.xyz/repo/thomhines/square1/master/square1.min.css" type="text/css" />
+	<!-- slick carousel -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://use.typekit.net/jzt1tbh.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -18,24 +19,36 @@
 		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
 		<div class="logo"><img src="images/pokpok-logo-red.png"></div>
 		<ul>
-			<li><a href="index.html">about</a></li>
-			<li><a href="locations.html">locations</a></li>
-			<li><a href="menu.html">menu</a></li>
-			<li><a href="contact.html">contact</a></li>
+			<li><a href="index.html">About</a></li>
+			<li><a href="locations.html">Locations</a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li><a href="contact.html">Contact</a></li>
 		</ul>
 	</nav>
 	<main>
 		<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-			<img src="images/locations-gallery-1.jpeg">
-			<img src="images/locations-gallery-2.jpg">
-			<img src="images/locations-gallery-3.jpeg">
-			<img src="images/locations-gallery-4.jpg">
-			<img src="images/locations-gallery-5.jpg">
+			<div><img src="images/locations-gallery-1.jpeg"></div>
+			<div><img src="images/locations-gallery-2.jpg"></div>
+			<div><img src="images/locations-gallery-3.jpeg"></div>
+			<div><img src="images/locations-gallery-4.jpg"></div>
+			<div><img src="images/locations-gallery-5.jpg"></div>
 		</div>
-		<h2>pokpok</h2>
-		<h2>pok pok wing</h2>
-		<h2>whiskey soda lounge</h2>
-		<h2>pokpok nw</h2>
+		<div class="row">
+			<ul>
+				<div class="column">
+					<li><h2>pok pok</h2></li>
+				</div>
+				<div class="column">
+					<li><h2>pok pok wing</h2></li>
+				</div>
+				<div class="column">
+					<li><h2>pok pok nw</h2></li>
+				</div>
+				<div class="column">
+					<li><h2>whiskey soda lounge</h2></li>
+				</div>
+			</ul>
+		</div>
 		<p>Pok Pok located on SE Division is the original Pok Pok serving food found at pubs, restaurants, homes and the streets of Southeast Asia with the majority of the food coming from Thailand, and specifically from the North and Northeast of Thailand.</p>
 		<p>Pok Pok opens daily at 11:30am.  If there is a wait, all parties arriving before 10pm will be seated. If you are on the waitlist, we suggest enjoying appetizers and beverages at our Whiskey Soda Lounge, located kitty-corner from our restaurant. Our hosts happily coordinate between the two locations.</p>
 		<button type="button">order delivery</button>
