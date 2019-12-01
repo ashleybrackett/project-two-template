@@ -55,11 +55,26 @@
 	</footer>
 	<!-- link for jquery -->
 	<script
-  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
   	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   	crossorigin="anonymous"></script>
   	<script src="https://gitcdn.xyz/repo/thomhines/square1/master/square1.min.js"></script> 
   	<!-- link for your script file -->
-  	<script src="scripts/script.js"></script>
+  	<script>
+  		$('.slideshow').square1({
+			animation: 'slide',
+			transition_time: 2000,
+			prev_next_nav: 'hover',
+			dots_nav: 'hover',
+			fill_mode: 'contain',
+			auto_start: true,
+			start_delay: 25,
+			pause_on_hover: true,
+			theme: 'light',
+			prev_next_nav: 'inside',
+			dots_nav: 'inside',
+			caption: 'none',
+		});
+  	</script>
 </body>
 </html>
