@@ -2,34 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Project One - Subpage One</title>
-	<meta name="viewport" content="width=device-width">
+	<title>pok pok locations</title>
+<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-	<link rel="Stylesheet" href="https://gitcdn.xyz/repo/thomhines/square1/master/square1.min.css" type="text/css" />
-	<!-- slick carousel -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://use.typekit.net/jzt1tbh.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav>
-		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
-		<div class="logo"><img src="images/pokpok-logo-red.png"></div>
-		<ul>
+		<header class="nav">
+	        <div class="icon">
+	            <div class="hamburger"></div>
+	        </div>
+	        <div class="menu-mobile">
+	        	<a href="index.html">About</a>
+	        	<a href="locations.html">Locations</a>
+				<a href="menu.html">Menu</a>
+				<a href="contact.html">Contact</a>
+	       </div>          
+	   </header>
+	   <header class="desktop">
+	       <div class="menu-desktop">
+	       <ul>
 			<li><a href="index.html">About</a></li>
 			<li><a href="locations.html">Locations</a></li>
 			<li><a href="menu.html">Menu</a></li>
 			<li><a href="contact.html">Contact</a></li>
 		</ul>
+	       </div>
+	   </header>
+	<nav>
+		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
+		<div class="logo"><img src="images/pokpok-logo-red.png"></div>
+
 	</nav>
 	<main>
 			<div><img src="images/locations-gallery-4.jpg"></div>
 		<div>
 			<p>Pok Pok located on SE Division is the original Pok Pok serving food found at pubs, restaurants, homes and the streets of Southeast Asia with the majority of the food coming from Thailand, and specifically from the North and Northeast of Thailand.</p>
-			<br>
 			<p>Pok Pok opens daily at 11:30am.  If there is a wait, all parties arriving before 10pm will be seated. If you are on the waitlist, we suggest enjoying appetizers and beverages at our Whiskey Soda Lounge, located kitty-corner from our restaurant. Our hosts happily coordinate between the two locations.</p>
 		<br>
 			<ul>
@@ -43,43 +55,75 @@
 				<div>
 					<li><h2>pok pok wing</h2></li>
 				</div>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
+					<p>1469 ne prescott st.</p>
+					<p>portland, or 97211</p>
+					<p>open 11:00am-9:00pm. 7 days a week</p>
 				<div>
 					<li><h2>pok pok nw</h2></li>
 				</div>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
+					<p>1639 ne marshall st.</p>
+					<p>portland, or 97209</p>
+					<p>917.351.1946</p>
+					<p>open 11:30am-10:00pm. 7 days a week</p>
 				<div>
 					<li><h2>whiskey soda lounge</h2></li>
 				</div>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
+					<p>313313 se division st.</p>
+					<p>portland, or 97202</p>
+					<p>503.232.0102</p>
+					<p>open 4:00pm-11:00pm. sunday-wednesday</p>
+					<p>4:00pm-midnight. thursday-saturday</p>
 			</ul>
 		</div>
 		<button type="button">order delivery</button>
 		<button type="button">order pick-up</button>
-		<img src="images/about-2.jpg">
 
 	<img src="images/locations-footer.jpg">
 	</main>
 	<footer>
-		<!-- footer content here -->
+			&copy; ashley brackett
 	</footer>
 	<!-- link for jquery -->
-	&copy; ashley brackett
-	<script
+<script
   	src="https://code.jquery.com/jquery-3.4.1.min.js"
   	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   	crossorigin="anonymous"></script>
   	<!-- link for your script file -->
-  	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-  	<script src="scripts/script.js"></script>
+  	<script type="text/javascript">
+  		
+
+function toggleIcon() {
+    $('.icon').on('click', function(){
+        $('.icon').toggleClass('active');
+        $('.menu-mobile').slideToggle(400);
+    })
+}
+
+function closeMobileMenu(){
+    $('.menu-mobile').on('click', 'a', function(){
+        $('.icon').trigger('click');
+    })
+}
+
+
+
+function desktopMenu() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50 && $(window).width() > 768) {
+            $('header.desktop').fadeIn(500);
+        } else {
+            $('header.desktop').fadeOut(500);
+        }
+    })
+}
+
+//when the page loads call toggleIcon;
+$(toggleIcon);
+$(closeMobileMenu);
+$(desktopMenu);
+
+
+  	</script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

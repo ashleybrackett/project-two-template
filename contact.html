@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Project One - Homepage</title>
+	<title>pok pok contact</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -12,35 +12,40 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- These semantic tags were added to help you get started but you are very welcome to delete any of them and do your own thing -->
-	<!-- <header>
-		!-- header, h1, logo etc content --
-		<h1>There Can Be Only One Header One</h1>
-		<h2>Header Two</h2>
-		<h3>Header Three</h3>
-		<h4>Header Four</h4>
-		<p>A paragraph of lorem ipsum text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, eligendi.</p>
-	</header> -->
-
-	<nav>
-		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
-		<div class="logo"><img src="images/pokpok-logo-red.png"></div>
-		<ul>
+		<header class="nav">
+	        <div class="icon">
+	            <div class="hamburger"></div>
+	        </div>
+	        <div class="menu-mobile">
+	        	<a href="index.html">About</a>
+	        	<a href="locations.html">Locations</a>
+				<a href="menu.html">Menu</a>
+				<a href="contact.html">Contact</a>
+	       </div>          
+	   </header>
+	   <header class="desktop">
+	       <div class="menu-desktop">
+	       <ul>
 			<li><a href="index.html">About</a></li>
 			<li><a href="locations.html">Locations</a></li>
 			<li><a href="menu.html">Menu</a></li>
 			<li><a href="contact.html">Contact</a></li>
 		</ul>
+	       </div>
+	   </header>
+	<nav>
+		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
+		<div class="logo"><img src="images/pokpok-logo-red.png"></div>
+
 	</nav>
 	<main>
 		<div><img src="images/about-1.jpg"></div>
 		<h3>contact pokpok</h3>
 		<p>have a question about pok pok products?</p>
-		<p>fill out the form below. For restaurant questions, please provide the location of the restaurant.</p>
+		<p>send us an email at the address below. For restaurant questions, please provide the location of the restaurant.</p>
 		<h3>wholesale</h3>
 		<p>you want to buy in bulk?</p>
-		<p>fill out the form below and a team member will get back to you as soon as possible.</p>
-		<h3>pok pok press</h3>
+		<p>send an email to the address below and a team member will get back to you as soon as possible.</p>
 	<!-- Main content here -->
 	</main>
 	<footer>
@@ -48,6 +53,47 @@
 		&copy; ashley brackett
 	</footer>
 	<!-- link for jquery -->
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+  	<!-- link for your script file -->
+  	<script type="text/javascript">
+  		
+
+function toggleIcon() {
+    $('.icon').on('click', function(){
+        $('.icon').toggleClass('active');
+        $('.menu-mobile').slideToggle(400);
+    })
+}
+
+function closeMobileMenu(){
+    $('.menu-mobile').on('click', 'a', function(){
+        $('.icon').trigger('click');
+    })
+}
+
+
+
+function desktopMenu() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50 && $(window).width() > 768) {
+            $('header.desktop').fadeIn(500);
+        } else {
+            $('header.desktop').fadeOut(500);
+        }
+    })
+}
+
+//when the page loads call toggleIcon;
+$(toggleIcon);
+$(closeMobileMenu);
+$(desktopMenu);
+
+
+  	</script>
+    <script type="text/javascript" src="script.js"></script>
 	<script
   	src="https://code.jquery.com/jquery-3.4.1.min.js"
   	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
